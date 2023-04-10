@@ -1,13 +1,7 @@
-const calcArea = function(fn) {
-  return fn(Math.PI * Math.pow(this.radius, 2));
-}
-
-const circle = {
-  radius: 10,
-  //calcArea
-}
-
-ca = calcArea.bind(circle);
-
-console.log(ca(Math.round));
-console.log(ca(Math.ceil));
+f1 = function() {
+  var v1 = 10;
+  return function() {
+    return v1;
+  }()
+};
+console.log(f1());
